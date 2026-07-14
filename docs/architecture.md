@@ -28,10 +28,10 @@ Used to simulate malicious requests against the target application.
 
 Examples:
 
-- SQL Injection payloads
-- XSS payloads
-- Local File Inclusion payloads
-- Requests originating from blocked IP addresses
+1. SQL Injection payloads
+2. XSS payloads
+3. Local File Inclusion payloads
+4. Requests originating from blocked IP addresses
 
 ---
 
@@ -41,8 +41,8 @@ Apache acts as the front-end web server responsible for serving the application.
 
 Incoming requests are received on:
 
-- HTTP (Port 80)
-- HTTPS (Port 443)
+1. HTTP (Port 80)
+2. HTTPS (Port 443)
 
 Before requests reach DVWA they are inspected by ModSecurity.
 
@@ -54,11 +54,11 @@ ModSecurity acts as an application layer firewall integrated into Apache.
 
 Responsibilities:
 
-- Intercept incoming requests
-- Inspect headers, parameters and request bodies
-- Apply security rules
-- Generate alerts and logs
-- Block malicious traffic
+1. Intercept incoming requests
+2. Inspect headers, parameters and request bodies
+3. Apply security rules
+4. Generate alerts and logs
+5. Block malicious traffic
 
 ---
 
@@ -85,9 +85,9 @@ In addition to OWASP CRS rules, custom ModSecurity rules were implemented.
 
 Example:
 
-- Blocking requests from a specific IP address.
-- Logging custom events.
-- Testing custom response behaviour.
+a. Blocking requests from a specific IP address.
+b. Logging custom events.
+c. Testing custom response behaviour.
 
 Example custom rule:
 
@@ -127,9 +127,9 @@ The backend database stores user information used by DVWA.
 
 Examples:
 
-- User credentials
-- User profiles
-- Application data
+a, User credentials
+b. User profiles
+c. Application data
 
 The WAF prevents malicious requests from reaching the database layer.
 
@@ -177,9 +177,9 @@ ModSecurity evaluates the request against OWASP CRS signatures.
 
 Examples:
 
-- SQLi signatures
-- XSS signatures
-- LFI signatures
+a. SQLi signatures
+b. XSS signatures
+c. LFI signatures
 
 ### Step 3: Anomaly Scoring
 
@@ -215,13 +215,13 @@ Security events are written to Apache and ModSecurity logs for analysis.
 
 This project implemented the following controls:
 
-- SQL Injection protection
-- Cross Site Scripting protection
-- Local File Inclusion protection
-- Protocol enforcement
-- HTTPS support
-- Custom IP blocking
-- Rule tuning and exclusions
+a. SQL Injection protection
+b. Cross Site Scripting protection
+c. Local File Inclusion protection
+d. Protocol enforcement
+e. HTTPS support
+f. Custom IP blocking
+g. Rule tuning and exclusions
 
 ---
 
